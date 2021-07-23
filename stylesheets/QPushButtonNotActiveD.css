@@ -1,0 +1,123 @@
+/*QPushButton
+{
+ color: #eff0f1;
+ background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 , stop: 0.5);
+ border-width: 0.1ex;
+ border-color: #76797c;
+ border-style: solid;
+ padding: 0.5ex;
+ border-radius: 0.2ex;
+ outline: none;
+}
+
+QPushButton:disabled
+{
+ background-color: #31363b;
+ border-width: 0.1ex;
+ border-color: #454545;
+ border-style: solid;
+ padding-top: 0.5ex;
+ padding-bottom: 0.5ex;
+ padding-left: 1ex;
+ padding-right: 1ex;
+ border-radius: 0.2ex;
+ color: #454545;
+}
+
+QPushButton:focus
+{
+ color: white;
+}
+
+QPushButton:pressed
+{
+ background-color: #31363b;
+ padding-top: -1.5ex;
+ padding-bottom: -1.7ex;
+}
+
+QPushButton:checked
+{
+ background-color: #76797c;
+ border-color: #6A6969;
+}
+
+QPushButton:hover
+{
+ background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #454a4f, stop: 0.5 #3b4045);
+ border: 0.1ex solid #3daee9;
+ color: #eff0f1;
+}
+
+QPushButton:checked:hover
+{
+ background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #808386, stop: 0.5 #76797c);
+ border: 0.1ex solid #3daee9;
+ color: #eff0f1;
+}
+
+QPushButton:hover:pressed
+{
+ background-color: #31363b;
+}*/
+
+ QPushButton
+ {
+    color: #eff0f1;
+    background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #3b4045, stop: 0.5 #31363b);
+    border : none;
+    padding : 0.5ex;
+    border-radius : 0.2ex;
+    outline : none;
+ }
+ 
+ QPushButton:disabled
+ {  
+    color: #eff0f1;
+    background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #3b4045, stop: 0.5 #31363b);
+    padding : 0.5ex;
+    border : none;
+    border-radius : 0.2ex;
+    outline : none; 
+ }
+ 
+ QPushButton:focus
+ {
+    color: white;
+ }
+ 
+ QPushButton:pressed
+ {
+     background-color: #31363b;
+     padding-top: -1.5ex;
+     padding-bottom: -1.7ex;
+ }
+
+ QPushButton:checked
+ {
+     background-color: #76797c;
+ }
+ 
+ QPushButton:hover
+ {
+     background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #454a4f, stop: 0.5 #3b4045);
+     color: #eff0f1;
+ }
+ 
+ QPushButton:checked:hover
+ {
+     background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #808386, stop: 0.5 #76797c);
+     color: #eff0f1;
+ }
+
+  QPushButton:hover:pressed
+   {
+     background-color: #31363b;
+ }
+
+  QPushButton::menu-indicator
+ {
+     subcontrol-origin: padding;
+     subcontrol-position: bottom right;
+     left: 0.8ex;
+ }

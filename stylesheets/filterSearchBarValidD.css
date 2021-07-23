@@ -1,0 +1,14 @@
+QLineEdit
+{
+ background-color: #232629;
+ padding: 0.5ex;
+ border-style: solid;
+ border: 0.1ex solid #189200;
+ border-radius: 0.2ex;
+ color: #eff0f1;
+}
+
+QLineEdit:hover:pressed
+{
+ background-color: #106100;
+}

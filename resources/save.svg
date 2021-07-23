@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+  <g id="floppy-disk" transform="translate(0.001 -0.003)">
+    <path id="Path_4" data-name="Path 4" d="M127.791,7.544h7.33V0H127v6.75A.792.792,0,0,0,127.791,7.544Z" transform="translate(-120.304 0)" fill="#fff"/>
+    <path id="Path_5" data-name="Path 5" d="M312.793,6.753V0H311V7.544h1A.792.792,0,0,0,312.793,6.753Z" transform="translate(-294.601 0)" fill="#fff"/>
+    <path id="Path_6" data-name="Path 6" d="M127,359.493h11.5V351H127Z" transform="translate(-120.304 -332.49)" fill="#fff"/>
+    <path id="Path_7" data-name="Path 7" d="M26.995,6.676a.792.792,0,0,0-.175-.423c-.039-.048.363.358-6.012-6.018A.8.8,0,0,0,20.248,0h-.474v6.75A2.376,2.376,0,0,1,17.4,9.126H7.487A2.376,2.376,0,0,1,5.114,6.753V0H2.372A2.376,2.376,0,0,0,0,2.376V24.63A2.376,2.376,0,0,0,2.372,27H5.114V15.929a2.376,2.376,0,0,1,2.373-2.373H17.4a2.376,2.376,0,0,1,2.373,2.373V27h4.851A2.376,2.376,0,0,0,27,24.63c0-19.2,0-17.893,0-17.954Z" transform="translate(0 0)" fill="#fff"/>
+    <path id="Path_8" data-name="Path 8" d="M137.7,287h-9.914a.792.792,0,0,0-.791.791v1h11.5v-1A.792.792,0,0,0,137.7,287Z" transform="translate(-120.304 -271.865)" fill="#fff"/>
+  </g>
+</svg>

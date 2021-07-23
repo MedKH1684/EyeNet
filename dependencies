@@ -1,0 +1,6 @@
+dependencies:
+wireshark
+python3:
+	pyqt5
+	scapy
+	requests

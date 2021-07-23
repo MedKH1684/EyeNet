@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>772</width>
+    <height>492</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>EyeNet - Syntax Support</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../resources/logo.png</normaloff>../resources/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QToolTip
+ {
+    border: none;
+    background-color: #31363b;
+    alternate-background-color: #3b4045;
+    color: #eff0f1;
+    padding: 1px;  /* we need to chnge this */
+    opacity: 200;
+ }
+ 
+ QWidget
+ {
+     color: #eff0f1;
+     background-color: #31363b;
+     selection-background-color:#3daee9;
+     selection-color: #eff0f1;
+     outline: 0;
+ }
+ 
+ QWidget:item:hover
+ {
+     background-color: #3daee9;
+     color: #eff0f1;
+ }
+ 
+ QWidget:item:selected
+ {
+     background-color: #3daee9;
+ }
+ 
+ QGroupBox::indicator
+ {
+     margin-left: 0.2ex;
+ }
+ 
+ QMenuBar
+ {
+     background-color: #31363b;
+     color: #eff0f1;
+ }
+ 
+ QMenuBar::item
+ {
+     background: transparent;
+ }
+ 
+ QMenuBar::item:selected
+ {
+     background: transparent;
+     border: none; 
+ }
+ 
+ QMenuBar::item:pressed
+ {
+     border: none;
+     background-color: #3daee9;
+     color: #eff0f1;
+     margin-bottom: -0.1ex;  /* maybe we will change this */
+     padding-bottom: 0.1ex;  /* this too */
+ }
+ 
+ QMenu
+ {
+     border: none;
+     color: #eff0f1;
+     margin: 0.2ex;  /* hmmmmmmmm */
+ }
+ 
+ QMenu::icon
+ {
+     margin: 0.5ex;
+ }
+ 
+ QMenu::item
+ {
+     padding: 0.5ex 3ex 0.5ex 3ex;
+     margin-left: 0.5ex;
+     border: none;
+ }
+ 
+ QMenu::item:selected
+ {
+     color: #eff0f1;
+ }
+ 
+ QMenu::separator
+ {
+     height: 0.2ex;
+     background: lightblue;
+     margin-left: 1ex;
+     margin-right: 0.5ex;
+ }
+ 
+ QAbstractItemView
+ {
+     alternate-background-color: #31363b;
+     color: #eff0f1;
+     border: none;
+     border-radius: 0.2ex;
+ }
+ 
+ QWidget:focus,
+ QMenuBar:focus
+ {
+     border: none;
+ }
+ 
+ QTabWidget:focus,
+ QCheckBox:focus,
+ QRadioButton:focus,
+ QSlider:focus
+ {
+     border: none;
+ }
+ 
+ QLineEdit
+ {
+     background-color: #232629; 
+     padding: 0.5ex;
+     border: none;
+     border-radius: 0.2ex;
+     color: #eff0f1;
+ }
+ 
+
+ QAbstractScrollArea
+ {
+     border-radius: 0.2ex;
+     border: none;
+     background-color: transparent;
+ }
+ 
+ QScrollBar:horizontal
+ {
+     height: 10px;
+     margin: 0.3ex 1.5ex 0.3ex 1.5ex;
+     border: none;
+     border-radius: 4px;
+     background-color: #2A2929;
+ }
+ 
+ QScrollBar::handle:horizontal
+ {
+     background-color: #3daee9;
+     min-width: 60px;
+     border-radius: 4px;
+ }
+ 
+ QScrollBar::add-line:horizontal
+ {
+     margin: 0px 0.3ex 0px 0.3ex;
+     width: 1ex;
+     height: 1ex;
+     subcontrol-position: right;
+     subcontrol-origin: margin;
+ }
+ 
+ QScrollBar::sub-line:horizontal
+ {
+     margin: 0ex 0.3ex 0ex 0.3ex;
+     width: 1ex;
+     height: 1ex;
+     subcontrol-position: left;
+     subcontrol-origin: margin;
+ }
+ 
+ QScrollBar::add-line:horizontal:hover,
+ QScrollBar::add-line:horizontal:on
+ {
+     width: 1ex;
+     height: 1ex;
+     subcontrol-position: right;
+     subcontrol-origin: margin;
+ }
+ 
+ 
+ QScrollBar::sub-line:horizontal:hover,
+ QScrollBar::sub-line:horizontal:on
+ {
+     width: 1ex;
+     height: 1ex;
+     subcontrol-position: left;
+     subcontrol-origin: margin;
+ }
+ 
+ QScrollBar::up-arrow:horizontal,
+ QScrollBar::down-arrow:horizontal
+ {
+     background: none;
+ }
+ 
+ 
+ QScrollBar::add-page:horizontal,
+ QScrollBar::sub-page:horizontal
+ {
+     background: none;
+ }
+ 
+ QScrollBar:vertical
+ {
+     background-color: #2A2929;
+     width: 10px;
+     margin: 1.5ex 0.3ex 1.5ex 0.3ex;
+     border: none;
+     border-radius: 4px;
+ }
+ 
+ QScrollBar::handle:vertical
+ {
+     background-color: #3daee9;
+     min-height: 40px;
+     border-radius: 4px;
+ }
+ 
+ QScrollBar::sub-line:vertical
+ {
+     margin: 0.3ex 0ex 0.3ex 0ex;
+     height: 1ex;
+     width: 1ex;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+ 
+ QScrollBar::add-line:vertical
+ {
+     margin: 0.3ex 0ex 0.3ex 0ex;
+     height: 1ex;
+     width: 1ex;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin;
+ }
+ 
+ QScrollBar::sub-line:vertical:hover,
+ QScrollBar::sub-line:vertical:on
+ {
+     height: 1ex;
+     width: 1ex;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+ 
+ 
+ QScrollBar::add-line:vertical:hover,
+ QScrollBar::add-line:vertical:on
+ {
+     height: 1ex;
+     width: 1ex;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin;
+ }
+ 
+ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
+ {
+     background: none;
+ }
+ 
+ 
+ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
+ {
+     background: none;
+ }
+ 
+ QTextEdit
+ {
+     background-color: #232629;
+     color: #eff0f1;
+     border: none;
+ }
+ 
+ QPlainTextEdit
+ {
+     background-color: #232629;;
+     color: #eff0f1;
+     border-radius: 0.2ex;
+     border: none;
+ }
+ 
+ /* #################################################################################*/
+ QHeaderView::section
+ {
+     background-color: #76797c;
+     color: #eff0f1;
+     padding: 0.5ex;
+     border: none;
+ }
+ 
+ QSizeGrip
+ {
+     width: 1.2ex;
+     height: 1.2ex;
+ }
+
+ QToolBar
+ {
+     border: none;
+     background: 0.1ex solid #31363b;
+     font-weight: bold;
+ }
+ 
+ QToolBar::handle:horizontal
+ {
+     width : 1.6ex;
+     height : 6.4ex;
+ }
+ 
+ QToolBar::handle:vertical
+ {
+     width : 5.4ex;
+     height : 1ex;
+ }
+ 
+ QToolBar::separator:horizontal
+ {
+     width : 0.7ex;
+     height : 6.3ex;
+ }
+ 
+ QToolBar::separator:vertical
+ {
+     width : 6.3ex;
+     height : 0.7ex;
+ }
+ 
+ QPushButton
+ {
+    color: #eff0f1;
+    background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #3b4045, stop: 0.5 #31363b);
+    border : none;
+    padding : 0.5ex;
+    border-radius : 0.2ex;
+    outline : none;
+ }
+ 
+ QPushButton:disabled
+ {  
+    color: #eff0f1;
+    background-color:transparent;
+    padding : 0.5ex;
+    border : none;
+    border-radius : 0.2ex;
+    outline : none; 
+ }
+ 
+ QPushButton:focus
+ {
+    color: white;
+ }
+ 
+ QPushButton:pressed
+ {
+     background-color: #31363b;
+     padding-top: -1.5ex;
+     padding-bottom: -1.7ex;
+ }
+
+ QPushButton:checked
+ {
+     background-color: #76797c;
+ }
+ 
+ QPushButton:hover
+ {
+     background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #454a4f, stop: 0.5 #3b4045);
+     color: #eff0f1;
+ }
+ 
+ QPushButton:checked:hover
+ {
+     background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #808386, stop: 0.5 #76797c);
+     color: #eff0f1;
+ }
+ 
+ QLineEdit:hover
+ {
+     border: none;  /* we wont change this i guess */
+     color: #eff0f1;
+ }
+ 
+ QComboBox:hover:pressed,
+ QPushButton:hover:pressed,
+ QAbstractSpinBox:hover:pressed,
+ QLineEdit:hover:pressed,
+ QTextEdit:hover:pressed,
+ QPlainTextEdit:hover:pressed,
+ QAbstractView:hover:pressed,
+ QTreeView:hover:pressed
+ {
+     background-color: #31363b; 
+ }
+ 
+ QAbstractSpinBox
+ {
+     padding: 0.5ex;
+     border: none;
+     background-color: #232629;
+     color: #eff0f1;
+     border-radius: 0.2ex;
+     min-width: 7ex; /* change this */
+ }
+ 
+ QAbstractSpinBox:up-button
+ {
+     background-color: transparent;
+     subcontrol-origin: border;
+     subcontrol-position: center right;
+ }
+ 
+ QAbstractSpinBox:down-button
+ {
+     background-color: transparent;
+     subcontrol-origin: border;
+     subcontrol-position: center left;
+ }
+ 
+ QAbstractSpinBox::up-arrow,
+ QAbstractSpinBox::up-arrow:disabled,
+ QAbstractSpinBox::up-arrow:off
+ {
+     width: 0.9ex;
+     height: 0.6ex;
+ }
+ 
+ QAbstractSpinBox::up-arrow:hover
+ {
+     width: 0.9ex;
+     height: 0.6ex;
+ }
+ 
+ QAbstractSpinBox::down-arrow,
+ QAbstractSpinBox::down-arrow:disabled,
+ QAbstractSpinBox::down-arrow:off
+ {
+     width: 0.9ex;
+     height: 0.6ex;
+ }
+ 
+ QAbstractSpinBox::down-arrow:hover
+ {
+     width: 0.9ex;
+     height: 0.6ex;
+ }
+ 
+ /* BORDERS */
+ QTabWidget::pane
+ {
+     padding: 0.5ex;
+     margin: 0.1ex;
+ }
+ 
+ QTabWidget::pane:top
+ {
+     border: none;
+     top: -0.1ex;
+ }
+ 
+ QTabWidget::pane:bottom
+ {
+     border: none;
+     bottom: -0.1ex;
+ }
+ 
+ QTabWidget::pane:left
+ {
+     border: none;
+     right: -0.1ex;
+ }
+ 
+ QTabWidget::pane:right
+ {
+     border: none;
+     left: -0.1ex;
+ }
+ 
+ 
+ QTabBar
+ {
+     qproperty-drawBase: 0;
+     left: 0.5ex; 
+     border-radius: 0.3ex;
+ }
+ 
+ QTabBar::close-button
+ {
+     background: transparent;
+ }
+ 
+ QTabBar::close-button:hover
+ {
+     width: 1.2ex;
+     height: 1.2ex;
+     background: transparent;
+ }
+ 
+ QTabBar::close-button:pressed
+ {
+     width: 1.2ex;
+     height: 1.2ex;
+     background: transparent;
+ }
+ 
+ /* TOP TABS */
+ QTabBar::tab:top
+ {
+     color: #eff0f1;
+     border: none;
+     background-color: #31363b;
+     padding: 0.5ex;
+     min-width: 50px;
+ }
+ 
+ QTabBar::tab:top:last,
+ QTabBar::tab:top:only-one
+ {
+     color: #eff0f1;
+     border:none;
+     background-color: #31363b;
+     padding: 0.5ex;
+     min-width: 50px;
+ }
+ 
+ QTabBar::tab:top:!selected
+ {
+     color: #eff0f1;
+     background-color: #54575B;
+     border: none;
+ }
+ 
+ QTabBar::tab:top:first:!selected
+ {
+     color: #eff0f1;
+     background-color: #54575B;
+     border: none;
+ }
+ 
+ QTabBar::tab:top:!selected:hover
+ {
+     background-color: rgba(61, 173, 232, 0.2);
+     border: none;
+ }
+ 
+ QTabBar::tab:top:!selected:first:hover
+ {
+     background-color: rgba(61, 173, 232, 0.2);
+     border: none;
+ }
+ 
+ /* BOTTOM TABS */
+ 
+ QTabBar::tab:bottom
+ {
+     color: #eff0f1;
+     border: none;
+     padding: 0.5ex;
+     min-width: 50px;
+ }
+ 
+ QTabBar::tab:bottom:last,
+ QTabBar::tab:bottom:only-one
+ {
+     color: #eff0f1;
+     border: none;
+     background-color: #31363b;
+     padding: 0.5ex;
+     min-width: 50px;
+ }
+ 
+ QTabBar::tab:bottom:!selected
+ {
+     color: #eff0f1;
+     background-color: #54575B;
+     border: none;
+ }
+ 
+ QTabBar::tab:bottom:first:!selected
+ {
+     color: #eff0f1;
+     background-color: #54575B;
+     border: none;
+ }
+ 
+ QTabBar::tab:bottom:!selected:hover
+ {
+     background-color: rgba(61, 173, 232, 0.2);
+     border: none;
+ }
+ 
+ QTabBar::tab:bottom:!selected:first:hover
+ {
+     background-color: rgba(61, 173, 232, 0.2);
+     border: none;
+ }
+ 
+ /* LEFT TABS */
+ QTabBar::tab:left
+ {
+     color: #eff0f1;
+     border: none;
+     background-color: #31363b;
+     padding: 0.5ex;
+     min-height: 50px;
+ }
+ 
+ QTabBar::tab:left:last,
+ QTabBar::tab:left:only-one
+ {
+     color: #eff0f1;
+     border: none;
+     background-color: #31363b;
+     padding: 0.5ex;
+     min-height: 50px;
+ }
+ 
+ QTabBar::tab:left:!selected
+ {
+     color: #eff0f1;
+     background-color: #54575B;
+     border:none;
+ }
+ 
+ QTabBar::tab:left:!selected:hover
+ {
+     background-color: rgba(61, 173, 232, 0.2);
+     border:none;
+ }
+ 
+ QTabBar::tab:left:!selected:first:hover
+ {
+     background-color: rgba(61, 173, 232, 0.2);
+     border: 0.1ex rgba(61, 173, 232, 0.2);
+ }
+ 
+ /* RIGHT TABS */
+ QTabBar::tab:right
+ {
+     color: #eff0f1;
+     border: none;
+     background-color: #31363b;
+     padding: 0.5ex;
+     min-height: 50px;
+ }
+ 
+ QTabBar::tab:right:last,
+ QTabBar::tab:right:only-one
+ {
+     color: #eff0f1;
+     border: none;
+     background-color: #31363b;
+     padding: 0.5ex;
+     min-height: 50px;
+ }
+ 
+ QTabBar::tab:right:!selected
+ {
+     color: #eff0f1;
+     background-color: #54575B;
+     border: none;
+ }
+ 
+ QTabBar::tab:right:!selected:hover
+ {
+     background-color: rgba(61, 173, 232, 0.2);
+     border:none;
+ }
+ 
+ QTabBar::tab:right:!selected:first:hover
+ {
+     background-color: rgba(61, 173, 232, 0.2);
+     border: none;
+ }
+
+ QDockWidget
+ {
+     background: #31363b;
+     border: none;
+ }
+ 
+ QDockWidget::close-button,
+ QDockWidget::float-button
+ {
+     border: 0.1ex solid transparent;
+     border-radius: 0.2ex;
+     background: transparent;
+ }
+
+ QTreeView,
+ QListView
+ {
+     border: none;
+     background-color: #232629;
+ }
+ 
+ QTableView::item,
+ QListView::item,
+ QTreeView::item
+ {
+     padding: 0.3ex;
+ }
+ 
+ QTableView::item:!selected:hover,
+ QListView::item:!selected:hover,
+ QTreeView::item:!selected:hover
+ {
+     background-color: rgba(61, 173, 232, 0.2);
+     outline: 0;
+     color: #eff0f1;
+     padding: 0.3ex;
+ }
+ 
+ 
+ QSlider::groove:horizontal
+ {
+     border: none;
+     height: 0.4ex;
+     background: #565a5e;
+     margin: 0ex;
+     border-radius: 0.2ex;
+ }
+ 
+ QSlider::handle:horizontal
+ {
+     background: #232629;
+     border: none;
+     width: 1.6ex;
+     height: 1.6ex;
+     margin: -0.8ex 0;
+     border-radius: 0.9ex;
+ }
+ 
+ QSlider::groove:vertical
+ {
+     border: none;
+     width: 0.4ex;
+     background: #565a5e;
+     margin: 0ex;
+     border-radius: 0.3ex;
+ }
+ 
+ QSlider::handle:vertical
+ {
+     background: #232629;
+     border: none;
+     width: 1.6ex;
+     height: 1.6ex;
+     margin: 0 -0.8ex;
+     border-radius: 0.9ex;
+ }
+ 
+ QSlider::handle:horizontal:hover,
+ QSlider::handle:horizontal:focus,
+ QSlider::handle:vertical:hover,
+ QSlider::handle:vertical:focus
+ {
+     border:none;
+ }
+ 
+ QSlider::sub-page:horizontal,
+ QSlider::add-page:vertical
+ {
+     background: #3daee9;
+     border-radius: 0.3ex;
+ }
+ 
+ QSlider::add-page:horizontal,
+ QSlider::sub-page:vertical
+ {
+     background: #626568;
+     border-radius: 0.3ex;
+ }
+ 
+ QToolButton
+ {
+     background-color: transparent;
+     border: none;
+     border-radius: 0.2ex;
+     margin: 0.3ex;
+     padding: 0.5ex;
+ }
+ 
+ QToolButton[popupMode=&quot;1&quot;]  /* only for MenuButtonPopup */
+ {
+     padding-right: 2ex; /* make way for the popup button */
+ }
+ 
+ QToolButton[popupMode=&quot;2&quot;]  /* only for InstantPopup */
+ {
+     padding-right: 1ex; /* make way for the popup button */
+ }
+ 
+ QToolButton:hover,
+ QToolButton::menu-button:hover
+ {
+     background-color: transparent;
+     border: none;
+ }
+ 
+ QToolButton:checked,
+ QToolButton:pressed,
+ QToolButton::menu-button:pressed
+ {
+     background-color: #3daee9;
+     border: none;
+     padding: 0.5ex;
+ }
+ 
+ QToolButton::menu-button
+ {
+     border:none;
+     width: 1ex;
+     padding: 0.5ex;
+     outline: none;
+ }
+ 
+ QToolButton::menu-arrow:open
+ {
+     border: none;
+ }
+ 
+ QPushButton::menu-indicator
+ {
+     subcontrol-origin: padding;
+     subcontrol-position: bottom right;
+     left: 0.8ex;
+ }
+ 
+ QTableView
+ {
+     border: none;
+     gridline-color: #31363b;
+     background-color: #232629;
+ }
+ 
+ 
+ QTableView,
+ QHeaderView
+ {
+     border-radius: 0px;
+ }
+ 
+ QTableView::item:pressed,
+ QListView::item:pressed,
+ QTreeView::item:pressed
+ {
+     background: #3daee9;
+     color: #eff0f1;
+ }
+ 
+ QTableView::item:selected:active,
+ QTreeView::item:selected:active,
+ QListView::item:selected:active
+ {
+     background: #3daee9;
+     color: #eff0f1;
+ }
+ 
+ QListView::item:selected:hover,
+ QTreeView::item:selected:hover
+ {
+     background-color: #47b8f3;
+     color: #eff0f1;
+ }
+ 
+ QHeaderView
+ {
+     background-color: #31363b;
+     border: 0.1ex transparent;
+     border-radius: 0px;
+     margin: 0px;
+     padding: 0px;
+ 
+ }
+ 
+ QHeaderView::section
+ {
+     background-color: #31363b;
+     color: #eff0f1;
+     padding: 0.5ex;
+     border: none;
+     border-radius: 0px;
+     text-align: center;
+ }
+ 
+ QHeaderView::section::vertical::first,
+ QHeaderView::section::vertical::only-one
+ {
+     border-top: 0.1ex solid #76797c;
+ }
+ 
+ QHeaderView::section::vertical
+ {
+     border-top: transparent;
+ }
+ 
+ QHeaderView::section::horizontal::first,
+ QHeaderView::section::horizontal::only-one
+ {
+     border-left: 0.1ex solid #76797c;
+ }
+ 
+ QHeaderView::section::horizontal
+ {
+     border-left: transparent;
+ }
+ 
+ 
+ QHeaderView::section:checked
+ {
+     color: white;
+     background-color: #334e5e;
+ }
+
+
+ QTableCornerButton::section
+ {
+     background-color: #31363b;
+     border: none;
+     border-radius: 0px;
+ }
+ 
+ QToolBox
+ {
+     padding: 0.5ex;
+     border: none;
+ }
+ 
+ QToolBox:selected
+ {
+     background-color: #31363b;
+     border-color: none;
+ }
+ 
+ QToolBox:hover
+ {
+     border-color: none;
+ }
+ 
+ QSplitter::handle
+ {
+     border: none;
+ }
+ 
+ QSplitter::handle:hover
+ {
+     background-color: #787876;
+     border: none;
+ }
+ 
+ QSplitter::handle:horizontal
+ {
+     width: 0.1ex;
+ }
+ 
+ QSplitter::handle:vertical
+ {
+     height: 0.1ex;
+ }
+ 
+ QSpinBox
+ {
+     padding-right: 1.5ex;
+ }
+ 
+ QSpinBox::up-button
+ {
+     subcontrol-origin: content;
+     subcontrol-position: right top;
+     width: 1.6ex;
+     border-width: 0.1ex;
+ }
+ 
+ QSpinBox::up-arrow
+ {
+     width: 0.9ex;
+     height: 0.6ex;
+ }
+ 
+ QSpinBox::up-arrow:hover,
+ QSpinBox::up-arrow:pressed
+ {
+     width: 0.9ex;
+     height: 0.6ex;
+ }
+ 
+ QSpinBox::down-button
+ {
+     subcontrol-origin: content;
+     subcontrol-position: right bottom;
+     width: 1.6ex;
+     border-width: 0.1ex;
+ }
+ 
+ QSpinBox::down-arrow
+ {
+     width: 0.9ex;
+     height: 0.6ex;
+ }
+ 
+ QSpinBox::down-arrow:hover,
+ QSpinBox::down-arrow:pressed
+ {
+     width: 0.9ex;
+     height: 0.6ex;
+ }</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>Courier New</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Filter Usage Syntax</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="documentTitle">
+      <string>Syntax Support</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;title&gt;Syntax Support&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fira Sans Semi-Light'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;date &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;D-M-YYYY&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;      True if the date of capturing the packet is &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;D-M-YYYY&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;date &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;D-M-YYYY&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt; to &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;D-M-YYYY&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;      True if the date of capturing the packet in the range selected&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;dst host &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the IPv4/v6 destination field of the packet is &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, which may be either an address or a name. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;src host &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the IPv4/v6 source field of the packet is &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;host &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;      True if either the IPv4/v6 source or destination of the packet is &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Any of the above host expressions can be prepended with the keywords, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;arp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;rarp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, or &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip6&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; as in:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;   ip host &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;which is equivalent to: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;   ether proto &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;\ip&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt; and host &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;If &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; is a name with multiple IP addresses, each address will be checked for a match&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ether dst &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ehost&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the Ethernet destination address is &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ehost&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Ehost&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; may be either a name from /etc/ethers or a number&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ether src &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ehost&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the Ethernet source address is &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ehost&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ether host &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ehost&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if either the Ethernet source or destination address is &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ehost&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;dst net &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;net&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the IPv4/v6 destination address of the packet has a network number of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;net&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Net&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; may be either a name from the networks database (/etc/networks, etc.) or a network number. An IPv4 network number can be written as a dotted quad (e.g., 192.168.1.0), dotted triple (e.g., 192.168.1), dotted pair (e.g, 172.16), or single number (e.g., 10); the netmask is 255.255.255.255 for a dotted quad (which means that it's really a host match), 255.255.255.0 for a dotted triple, 255.255.0.0 for a dotted pair, or 255.0.0.0 for a single number. An IPv6 network number must be written out fully; the netmask is ff:ff:ff:ff:ff:ff:ff:ff, so IPv6 &amp;quot;network&amp;quot; matches are really always host matches, and a network match requires a netmask length. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;src net &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;net&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the IPv4/v6 source address of the packet has a network number of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;net&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;net &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;net&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if either the IPv4/v6 source or destination address of the packet has a network number of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;net&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;net &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;net&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;mask &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;netmask&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the IPv4 address matches &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;net&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; with the specific &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;netmask&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. May be qualified with &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;src&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;dst&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. Note that this syntax is not valid for IPv6 &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;net&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;net &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;net&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;/&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;len&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the IPv4/v6 address matches &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;net&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; with a netmask &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;len&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; bits wide. May be qualified with &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;src&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;dst&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;dst port &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is ip/tcp, ip/udp, ip6/tcp or ip6/udp and has a destination port value of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. The &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; can be a number or a name used in /etc/services (see &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(7) and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;udp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(7)). If a name is used, both the port number and protocol are checked. If a number or ambiguous name is used, only the port number is checked (e.g., &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;dst port 513&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; will print both tcp/login traffic and udp/who traffic, and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;port domain&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; will print both tcp/domain and udp/domain traffic). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;src port &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet has a source port value of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;port &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if either the source or destination port of the packet is &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;dst portrange &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port1&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port2&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is ip/tcp, ip/udp, ip6/tcp or ip6/udp and has a destination port value between &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port1&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port2&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port1&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port2&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; are interpreted in the same fashion as the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; parameter for &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;port&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;src portrange &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port1&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port2&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet has a source port value between &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port1&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port2&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;portrange &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port1&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port2&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if either the source or destination port of the packet is between &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port1&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port2&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Any of the above port or port range expressions can be prepended with the keywords, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;udp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, as in: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;tcp src port &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;port&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;which matches only tcp packets whose source port is &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;port&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;less &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;length&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet has a length less than or equal to &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;length&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. This is equivalent to: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;len &amp;lt;= &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;length&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;greater &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;length&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet has a length greater than or equal to &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;length&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. This is equivalent to: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;len &amp;gt;= &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;length&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip proto &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;protocol&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an IPv4 packet (see &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ip&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(4P)) of protocol type &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;protocol&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Protocol&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; can be a number or one of the names &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp6&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;igmp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;igrp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;pim&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ah&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;esp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;vrrp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;udp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, or &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. Note that the identifiers &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;udp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; are also keywords and must be escaped via backslash (\), which is \\ in the C-shell. Note that this primitive does not chase the protocol header chain. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip6 proto &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;protocol&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an IPv6 packet of protocol type &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;protocol&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. Note that this primitive does not chase the protocol header chain. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip6 protochain &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;protocol&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is IPv6 packet, and contains protocol header with type &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;protocol&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; in its protocol header chain. For example, &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;ip6 protochain 6&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;matches any IPv6 packet with TCP protocol header in the protocol header chain. The packet may contain, for example, authentication header, routing header, or hop-by-hop option header, between IPv6 header and TCP header. The BPF code emitted by this primitive is complex and cannot be optimized by BPF optimizer code in &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcpdump&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, so this can be somewhat slow. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip protochain &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;protocol&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Equivalent to &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip6 protochain &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;protocol&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, but this is for IPv4. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ether broadcast&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an Ethernet broadcast packet. The &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ether&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; keyword is optional. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip broadcast&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an IPv4 broadcast packet. It checks for both the all-zeroes and all-ones broadcast conventions, and looks up the subnet mask on the interface on which the capture is being done. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;If the subnet mask of the interface on which the capture is being done is not available, either because the interface on which capture is being done has no netmask or because the capture is being done on the Linux &amp;quot;any&amp;quot; interface, which can capture on more than one interface, this check will not work correctly. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ether multicast&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an Ethernet multicast packet. The &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ether&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; keyword is optional. This is shorthand for `&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ether[0] &amp;amp; 1 != 0&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;'. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip multicast&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an IPv4 multicast packet. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip6 multicast&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an IPv6 multicast packet. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ether proto &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;protocol&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is of ether type &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;protocol&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Protocol&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; can be a number or one of the names &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip6&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;arp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;rarp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;atalk&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;aarp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;decnet&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;sca&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;lat&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;mopdl&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;moprc&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;iso&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;stp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ipx&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, or &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;netbeui&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. Note these identifiers are also keywords and must be escaped via backslash (\). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;[In the case of FDDI (e.g., `&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;fddi protocol arp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;'), Token Ring (e.g., `&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tr protocol arp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;'), and IEEE 802.11 wireless LANS (e.g., `&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;wlan protocol arp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;'), for most of those protocols, the protocol identification comes from the 802.2 Logical Link Control (LLC) header, which is usually layered on top of the FDDI, Token Ring, or 802.11 header. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;When filtering for most protocol identifiers on FDDI, Token Ring, or 802.11, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcpdump&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; checks only the protocol ID field of an LLC header in so-called SNAP format with an Organizational Unit Identifier (OUI) of 0x000000, for encapsulated Ethernet; it doesn't check whether the packet is in SNAP format with an OUI of 0x000000. The exceptions are: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:8px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;iso&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:90px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcpdump&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; checks the DSAP (Destination Service Access Point) and SSAP (Source Service Access Point) fields of the LLC header; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;stp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;netbeui&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:90px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcpdump&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; checks the DSAP of the LLC header; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;atalk&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:8px; margin-left:90px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcpdump&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; checks for a SNAP-format packet with an OUI of 0x080007 and the AppleTalk etype. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;In the case of Ethernet, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcpdump&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; checks the Ethernet type field for most of those protocols. The exceptions are: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:8px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;iso&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;stp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;netbeui&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:90px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcpdump&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; checks for an 802.3 frame and then checks the LLC header as it does for FDDI, Token Ring, and 802.11; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;atalk&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:90px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcpdump&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; checks both for the AppleTalk etype in an Ethernet frame and for a SNAP-format packet as it does for FDDI, Token Ring, and 802.11; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;aarp&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:90px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcpdump&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; checks for the AppleTalk ARP etype in either an Ethernet frame or an 802.2 SNAP frame with an OUI of 0x000000; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ipx&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:8px; margin-left:90px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcpdump&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; checks for the IPX etype in an Ethernet frame, the IPX DSAP in the LLC header, the 802.3-with-no-LLC-header encapsulation of IPX, and the IPX etype in a SNAP frame. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;decnet src &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the DECNET source address is &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, which may be an address of the form ``10.123'', or a DECNET host name. [DECNET host name support is only available on ULTRIX systems that are configured to run DECNET.] &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;decnet dst &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the DECNET destination address is &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;decnet host &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if either the DECNET source or destination address is &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;host&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ifname &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;interface&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet was logged as coming from the specified interface (applies only to packets logged by OpenBSD's &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;pf&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(4)). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;on &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;interface&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Synonymous with the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ifname&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; modifier. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;rnr &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;num&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet was logged as matching the specified PF rule number (applies only to packets logged by OpenBSD's &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;pf&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(4)). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;rulenum &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;num&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Synonymous with the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;rnr&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; modifier. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;reason &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;code&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet was logged with the specified PF reason code. The known codes are: &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;match&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;bad-offset&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;fragment&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;short&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;normalize&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;memory&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; (applies only to packets logged by OpenBSD's &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;pf&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(4)). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;rset &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;name&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet was logged as matching the specified PF ruleset name of an anchored ruleset (applies only to packets logged by &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;pf&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(4)). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ruleset &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;name&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Synonymous with the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;rset&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; modifier. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;srnr &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;num&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet was logged as matching the specified PF rule number of an anchored ruleset (applies only to packets logged by &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;pf&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(4)). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;subrulenum &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;num&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Synonymous with the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;srnr&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; modifier. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;action &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;act&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if PF took the specified action when the packet was logged. Known actions are: &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;pass&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;block&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; (applies only to packets logged by OpenBSD's &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;pf&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(4)). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip6&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;arp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;rarp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;atalk&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;aarp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;decnet&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;iso&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;stp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ipx&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;netbeui&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Abbreviations for: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;ether proto &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;p&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;where &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;p&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; is one of the above protocols. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;lat&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;moprc&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;mopdl&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Abbreviations for: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;ether proto &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;p&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;where &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;p&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; is one of the above protocols. Note that &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcpdump&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; does not currently know how to parse these protocols. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;vlan &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;[vlan_id]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an IEEE 802.1Q VLAN packet. If &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;[vlan_id]&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; is specified, only true if the packet has the specified &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;vlan_id&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. Note that the first &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;vlan&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; keyword encountered in &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;expression&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; changes the decoding offsets for the remainder of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;expression&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; on the assumption that the packet is a VLAN packet. The &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;vlan &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;[vlan_id]&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; expression may be used more than once, to filter on VLAN hierarchies. Each use of that expression increments the filter offsets by 4. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For example: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;vlan 100 &amp;amp;&amp;amp; vlan 200&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;filters on VLAN 200 encapsulated within VLAN 100, and &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;vlan &amp;amp;&amp;amp; vlan 300 &amp;amp;&amp;amp; ip&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;filters IPv4 protocols encapsulated in VLAN 300 encapsulated within any higher order VLAN. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;mpls &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;[label_num]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an MPLS packet. If &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;[label_num]&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; is specified, only true is the packet has the specified &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;label_num&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. Note that the first &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;mpls&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; keyword encountered in &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;expression&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; changes the decoding offsets for the remainder of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;expression&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; on the assumption that the packet is a MPLS-encapsulated IP packet. The &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;mpls &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;[label_num]&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; expression may be used more than once, to filter on MPLS hierarchies. Each use of that expression increments the filter offsets by 4. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For example: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;mpls 100000 &amp;amp;&amp;amp; mpls 1024&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;filters packets with an outer label of 100000 and an inner label of 1024, and &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;mpls &amp;amp;&amp;amp; mpls 1024 &amp;amp;&amp;amp; host 192.9.200.1&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;filters packets to or from 192.9.200.1 with an inner label of 1024 and any outer label. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;pppoed&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is a PPP-over-Ethernet Discovery packet (Ethernet type 0x8863). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;pppoes&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is a PPP-over-Ethernet Session packet (Ethernet type 0x8864). Note that the first &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;pppoes&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; keyword encountered in &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;expression&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; changes the decoding offsets for the remainder of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;expression&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; on the assumption that the packet is a PPPoE session packet. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For example: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;pppoes &amp;amp;&amp;amp; ip&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;filters IPv4 protocols encapsulated in PPPoE. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;udp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Abbreviations for: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;ip proto &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;p&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt; or ip6 proto &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;p&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;where &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;p&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; is one of the above protocols. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;iso proto &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;protocol&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an OSI packet of protocol type &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;protocol&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Protocol&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; can be a number or one of the names &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;clnp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;esis&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, or &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;isis&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;clnp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;esis&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;isis&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Abbreviations for: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;iso proto &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;p&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;where &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;p&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; is one of the above protocols. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;l1&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;l2&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;iih&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;lsp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;snp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;csnp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;psnp&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Abbreviations for IS-IS PDU types. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;vpi&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;n&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, with a virtual path identifier of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;n&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;vci&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;n&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, with a virtual channel identifier of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;n&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;lane&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, and is an ATM LANE packet. Note that the first &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;lane&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; keyword encountered in &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;expression&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; changes the tests done in the remainder of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;expression&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; on the assumption that the packet is either a LANE emulated Ethernet packet or a LANE LE Control packet. If &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;lane&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; isn't specified, the tests are done under the assumption that the packet is an LLC-encapsulated packet. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;llc&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, and is an LLC-encapsulated packet. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;oamf4s&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, and is a segment OAM F4 flow cell (VPI=0 &amp;amp; VCI=3). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;oamf4e&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, and is an end-to-end OAM F4 flow cell (VPI=0 &amp;amp; VCI=4). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;oamf4&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, and is a segment or end-to-end OAM F4 flow cell (VPI=0 &amp;amp; (VCI=3 | VCI=4)). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;oam&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, and is a segment or end-to-end OAM F4 flow cell (VPI=0 &amp;amp; (VCI=3 | VCI=4)). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;metac&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, and is on a meta signaling circuit (VPI=0 &amp;amp; VCI=1). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;bcc&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, and is on a broadcast signaling circuit (VPI=0 &amp;amp; VCI=2). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;sc&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, and is on a signaling circuit (VPI=0 &amp;amp; VCI=5). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ilmic&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, and is on an ILMI circuit (VPI=0 &amp;amp; VCI=16). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;connectmsg&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, and is on a signaling circuit and is a Q.2931 Setup, Call Proceeding, Connect, Connect Ack, Release, or Release Done message. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;metaconnect&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the packet is an ATM packet, for SunATM on Solaris, and is on a meta signaling circuit and is a Q.2931 Setup, Call Proceeding, Connect, Release, or Release Done message. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;expr relop expr&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:8px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;True if the relation holds, where &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;relop&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; is one of &amp;gt;, &amp;lt;, &amp;gt;=, &amp;lt;=, =, !=, and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;expr&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; is an arithmetic expression composed of integer constants (expressed in standard C syntax), the normal binary operators [+, -, *, /, &amp;amp;, |, &amp;lt;&amp;lt;, &amp;gt;&amp;gt;], a length operator, and special packet data accessors. Note that all comparisons are unsigned, so that, for example, 0x80000000 and 0xffffffff are &amp;gt; 0. To access data inside the packet, use the following syntax: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;proto&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt; [ &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;expr&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt; : &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;size&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt; ]&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;Proto&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; is one of &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;ether, fddi, tr, wlan, ppp, slip, link, ip, arp, rarp, tcp, udp, icmp, ip6&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;radio&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt;, and indicates the protocol layer for the index operation. (&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;ether, fddi, wlan, tr, ppp, slip&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;link&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; all refer to the link layer. &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;radio&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; refers to the &amp;quot;radio header&amp;quot; added to some 802.11 captures.) Note that &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;tcp, udp&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; and other upper-layer protocol types only apply to IPv4, not IPv6 (this will be fixed in the future). The byte offset, relative to the indicated protocol layer, is given by &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;expr&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;Size&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; is optional and indicates the number of bytes in the field of interest; it can be either one, two, or four, and defaults to one. The length operator, indicated by the keyword &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;len&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt;, gives the length of the packet. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For example, `&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ether[0] &amp;amp; 1 != 0&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;' catches all multicast traffic. The expression `&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip[0] &amp;amp; 0xf != 5&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;' catches all IPv4 packets with options. The expression `&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ip[6:2] &amp;amp; 0x1fff = 0&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;' catches only unfragmented IPv4 datagrams and frag zero of fragmented IPv4 datagrams. This check is implicitly applied to the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;udp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; index operations. For instance, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcp[0]&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; always means the first byte of the TCP &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;header&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, and never means the first byte of an intervening fragment. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Some offsets and field values may be expressed as names rather than as numeric values. The following protocol header field offsets are available: &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmptype&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; (ICMP type field), &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmpcode&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; (ICMP code field), and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcpflags&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; (TCP flags field). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The following ICMP type field values are available: &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-echoreply&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-unreach&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-sourcequench&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-redirect&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-echo&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-routeradvert&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-routersolicit&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-timxceed&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-paramprob&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-tstamp&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-tstampreply&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-ireq&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-ireqreply&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-maskreq&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;icmp-maskreply&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The following TCP flags field values are available: &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcp-fin&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcp-syn&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcp-rst&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcp-push&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcp-ack&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;tcp-urg&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Primitives may be combined using: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;A parenthesized group of primitives and operators (parentheses are special to the Shell and must be escaped). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Negation (`&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;!&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;' or `&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;not&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;'). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Concatenation (`&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;' or `&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;and&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;'). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:8px; margin-left:30px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Alternation (`&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;||&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;' or `&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;or&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;'). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Negation has highest precedence. Alternation and concatenation have equal precedence and associate left to right. Note that explicit &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;and&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; tokens, not juxtaposition, are now required for concatenation. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;If an identifier is given without a keyword, the most recent keyword is assumed. For example, &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;not host vs and ace&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;is short for &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;not host vs and host ace&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;which should not be confused with &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;not ( host vs or ace )&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Expression arguments can be passed to &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;tcpdump&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; as either a single argument or as multiple arguments, whichever is more convenient. Generally, if the expression contains Shell metacharacters, it is easier to pass it as a single, quoted argument. Multiple arguments are concatenated with spaces before being parsed. &lt;/span&gt;&lt;a name=&quot;lbAF&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;EXAMPLES :&lt;/span&gt;&lt;/h2&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;To capture all packets arriving at or departing from &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;sundown&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;host sundown&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;To capture traffic between &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;helios&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and either &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;hot&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ace&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;host helios and \( hot or ace \)&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;To capture all IP packets between &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ace&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and any host except &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;helios&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;ip host ace and not helios&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;To capture all traffic between local hosts and hosts at Berkeley: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;net ucb-ether&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;To capture all ftp traffic through internet gateway &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;snup&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;: (note that the expression is quoted to prevent the shell from (mis-)interpreting the parentheses): &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;gateway snup and (port ftp or ftp-data)&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;To capture traffic neither sourced from nor destined for local hosts (if you gateway to one other net, this stuff should never make it onto your local net). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;ip and not net &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;localnet&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;To capture the start and end packets (the SYN and FIN packets) of each TCP conversation that involves a non-local host. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;tcp[tcpflags] &amp;amp; (tcp-syn|tcp-fin) != 0 and not src and dst net &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-style:italic;&quot;&gt;localnet&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;To capture all IPv4 HTTP packets to and from port 80, i.e. print only packets that contain data, not, for example, SYN and FIN packets and ACK-only packets. (IPv6 is left as an exercise for the reader.) &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;tcp port 80 and (((ip[2:2] - ((ip[0]&amp;amp;0xf)&amp;lt;&amp;lt;2)) - ((tcp[12]&amp;amp;0xf0)&amp;gt;&amp;gt;2)) != 0)&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;To capture IP packets longer than 576 bytes sent through gateway &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;snup&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;gateway snup and ip[2:2] &amp;gt; 576&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;To capture IP broadcast or multicast packets that were &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;not&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; sent via Ethernet broadcast or multicast: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;ether[0] &amp;amp; 1 = 0 and ip[16] &amp;gt;= 224&lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;To capture all ICMP packets that are not echo requests/replies (i.e., not ping packets): &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace'; font-size:12pt; font-weight:600;&quot;&gt;icmp[icmptype] != icmp-echo and icmp[icmptype] != icmp-echoreply&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
