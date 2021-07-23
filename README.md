@@ -16,7 +16,7 @@ EyeNet is a network packets sniffer and analyzer GUI application that works on L
 - install scapy library using: pip3 install scapy
 - install pyqt5 library using: pip3 install pyqt5
 
-# Developpers
+# Developers
 #### Mohammed Khaldoune: https://www.linkedin.com/in/mohammed-khaldoune-2093811b5/
 #### Zakaria Zaouite: https://www.linkedin.com/in/zakaria-zaouite-98a3811b3/
 #### Fatima Ezzahra Achait: https://www.linkedin.com/in/fatima-ezzahra-achait/
