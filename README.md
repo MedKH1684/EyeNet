@@ -9,5 +9,12 @@ EyeNet is a network packets sniffer and analyzer GUI application that works on L
 - List all the IP addresses of the machines with which your PC has already communicated.
 - Open a pcap file and read its contents in the application.
 
+# Dependencies
+OS: Linux
+install Python3
+install scapy library using: pip3 install scapy
+install pyqt5 library using: pip3 install pyqt5
+install requests 
+
 # Developpers
 Mohammed Khaldoune, Zakaria Zaouite, Fatima Ezzahra Achait
