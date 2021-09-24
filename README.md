@@ -1,5 +1,5 @@
 # EyeNet
-EyeNet is a network packets sniffer and analyzer GUI application that works on Linux 
+EyeNet is a Network Packets Sniffer and analyzer GUI application that works on Linux 
 
 # Features
 - Capture network traffic and display it in real time.
